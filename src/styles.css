@@ -1,1 +1,132 @@
 /* You can add global styles to this file, and also import other style files */
+
+body{
+  background-color: rgba(167, 167, 224, 0.3);
+}
+
+button{
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+  color: #3c416a;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+.single-hero-flexed{
+  width: 540px;
+  height: 350px;
+  border: 1px solid lightgray;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 30px;
+  padding-top: 30px;
+  background-color: white;
+  box-shadow: 1px 1px 5px black;
+}
+
+.custom-nav{
+  background-color: #20233a;
+}
+
+.custom-nav a{
+  color: white !important;
+}
+
+.main-img{
+  width: 1000px;
+}
+
+.logo{
+  width: 100px;
+}
+
+.activated{
+  background-color: #606094;
+}
+
+.welcome-text{
+  position: relative;
+  font-size: 100px;
+  margin-top: 30px;
+  font-family: 'Myriad Pro', 'Myriad', helvetica, arial, sans-serif;
+  text-shadow: 3px 4px 4px #292929;
+  -webkit-text-stroke: 1px white;
+  font-weight: bold;
+  text-align: center;
+  color: #1c1b5f;
+}
+
+.heroes-flexed{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cool-heading{
+  position: relative;
+  font-size: 60px;
+  margin-top: 30px;
+  font-family: 'Myriad Pro', 'Myriad', helvetica, arial, sans-serif;
+  text-shadow: 3px 4px 4px #292929;
+  -webkit-text-stroke: 1px white;
+  font-weight: bold;
+  text-align: center;
+  color: #1c1b5f;
+}
+
+.right{
+  position: absolute;
+  right: 60px;
+}
+.left{
+  margin-left: 60px;
+}
+
+.custom-popup{
+  width: 300px;
+  height: 80px;
+  border: 1px solid lightgrey;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.purple{
+  background-color: #3b3e5a;
+  color: white;
+}
+
+.purple:hover{
+  background-color: #1c1b5f;
+}
+
+.toggle-div{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 210px;
+  height: 30px;
+}
+
+.ng-invalid:not(form){
+  border-left: 5px solid red;
+}
+
+.ng-valid:not(form){
+  border-left: 5px solid green;
+}
+
+.custom-btn{
+  height: 30px;
+}

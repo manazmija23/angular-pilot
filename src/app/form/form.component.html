@@ -1,0 +1,42 @@
+<div class="container mt-5">
+
+  <button routerLink="/marvel" class="btn btn-primary mb-3">Back</button>
+
+  <form #marvelForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+
+    <div *ngIf="isShowing" class="custom-popup">
+      <h4>Hero successfully added!</h4>
+    </div>
+
+    <div class="form-group">
+
+      <label for="name">Name of the Hero</label>
+      <input id="name" type="text" required #name="ngModel" class="form-control is-invalid"  name="name"
+             [class.is-invalid]="name.invalid && name.touched"
+             [(ngModel)]="heroModel.name"
+      >
+
+      <small class="text-danger" [class.d-none]="name.valid">Hero name is required!</small>
+
+    </div>
+
+    <div class="form-group">
+
+      <label for="desc">Hero description</label>
+      <textarea type="text" name="description" id="desc" class="form-control" rows="10" required #description="ngModel"
+             [(ngModel)]="heroModel.description"
+             [class.is-invalid]="description.invalid && description.touched"
+      ></textarea>
+
+      <small class="text-danger" [class.d-none]="description.valid">Hero description is required!</small>
+
+    </div>
+
+    <button type="submit" class="btn btn-primary"
+            [disabled]="marvelForm.form.invalid"
+            (click)="showMessage()"
+    >Submit</button>
+
+  </form>
+
+</div>

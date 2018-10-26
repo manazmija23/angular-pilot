@@ -1,0 +1,15 @@
+<div class="container">
+
+  <div class="" [@animateState]="state">
+
+    <div class="single-hero">
+      <h3 class="cool-heading mb-3 mt-5">{{singleHero.name}}</h3>
+      <p>{{singleHero.description}}</p>
+      <span >{{singleHero.created_at | date:'fullDate' }}</span>
+    </div>
+
+    <button class="btn btn-danger mt-3" routerLink="/marvel">Back</button>
+
+  </div>
+
+</div>

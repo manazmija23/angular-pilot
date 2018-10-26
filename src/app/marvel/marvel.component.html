@@ -1,0 +1,35 @@
+<div class="container" >
+
+  <h2 class="cool-heading">Marvel Heroes</h2>
+
+  <button routerLink="/create-marvel" class="btn purple mb-3">Add new hero</button>
+
+  <div class="heroes-flexed" [@heroesStagger]="heroes">
+
+    <div *ngFor="let hero of heroes | paginate: { itemsPerPage: 2, currentPage: p }; let i = index" class="single-hero-flexed">
+
+      <div class="heroes-flexed align-baseline">
+        <a routerLink="{{ hero.id}}" ><h3>{{hero.name}}</h3></a>
+
+        <div class="toggle-div" [hidden]="!hideme[i]">
+
+          <h5>Are you sure?</h5>
+          <button class="btn-success btn-sm" (click)="onDelete(hero); hideme[i] = !hideme[i]" >Yes</button>
+          <button class="btn-danger btn-sm" (click)="hideme[i] = !hideme[i]" >No</button>
+
+        </div>
+
+        <button class="btn-info btn-sm custom-btn" (click)="hideme[i] = !hideme[i]">Delete</button>
+      </div>
+
+      <p>{{hero.description | truncate : 500}}</p>
+      <span>{{hero.created_at | date:'fullDate' }}</span>
+
+    </div>
+
+  </div>
+
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+
+</div>
+
